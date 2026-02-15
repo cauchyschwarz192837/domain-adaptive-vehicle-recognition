@@ -24,7 +24,7 @@ The pipeline combines:
 
 ---
 
-## 🧠 Motivation
+## Motivation
 
 Vehicle recognition models trained on dealership-style daytime images often degrade under:
 
@@ -38,7 +38,7 @@ This enables domain-adaptive fine-tuning without manual relabeling.
 
 ---
 
-## 🏗 Pipeline
+## Pipeline
 
 1. Scrape labeled daytime vehicle images (make, model, color).
 2. Train CycleGAN on unpaired day and night vehicle images.
@@ -71,3 +71,34 @@ Implements unpaired day ↔ night translation:
 - Identity preservation loss
 
 Files:
+- generator_model.py
+- discriminator_model.py
+- dataset.py
+- train.py
+- config.py
+- utils.py
+
+---
+
+### Vision-Language Fine-Tuning
+
+Fine-tunes **Microsoft Florence-2** to generate captions like: "red Toyota Camry", "black BMW X5"
+
+
+Three strategies implemented:
+
+- `full_finetune.py` — Full model fine-tuning
+- `lora_finetune.py` — Low-Rank Adaptation (LoRA)
+- `prefix_finetune.py` — Prefix tuning
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/<your-username>/domain-adaptive-vehicle-recognition.git
+cd domain-adaptive-vehicle-recognition
+pip install -r requirements.txt
+
+python train.py
+
