@@ -1,4 +1,4 @@
-# Domain-Adaptive Vehicle Attribute Recognition
+# End-to-End Night-Robust Vehicle Recognition Pipeline via GAN-Based Domain Augmentation and Multimodal Fine-Tuning, and Preliminary Web Scraping for Training Data Collection 
 
 CycleGAN-augmented domain adaptation and vision-language fine-tuning for robust vehicle make, model, and color recognition under nighttime conditions, with web-scrape training data
 
