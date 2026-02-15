@@ -104,4 +104,23 @@ python train.py
 python lora_finetune.py
 python full_finetune.py
 python prefix_finetune.py
+```
+
+## Prompt Engineering Strategy
+
+The vision-language model is conditioned using task-specific prompts to enforce structured attribute extraction.
+
+Prompt iterations included:
+
+- "Describe this car." (baseline, overly verbose)
+- "Identify the exterior color, make, and model of this vehicle."
+- "Return only: <color> <make> <model>."
+
+Structured prompts significantly reduced generative variance and hallucination while improving attribute accuracy.
+
+Prompts were designed to:
+- Constrain output format
+- Reduce descriptive noise
+- Focus cross-modal attention on discriminative vehicle features
+- Maintain robustness under domain shift (day → synthetic night)
 
