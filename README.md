@@ -101,4 +101,7 @@ cd domain-adaptive-vehicle-recognition
 pip install -r requirements.txt
 
 python train.py
+python lora_finetune.py
+python full_finetune.py
+python prefix_finetune.py
 
